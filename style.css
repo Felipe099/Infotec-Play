@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-color: #e5e5e5;
+    /* height: 1930px; */
+    margin-bottom: 50px;
+}
+
+body::before {
+    content: '';
+    width: 100%;
+    height: 380px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgb(45, 45, 57);
+}
+
+.page {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* BUTTON MODAL */
+
+.contactButton {
+    cursor: pointer;
+    background: rgb(250, 182, 18);
+    color: white;
+    font-family: inherit;
+    padding: 0.45em;
+    padding-left: 1em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #000;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3em;
+    transition: all 0.3s;
+}
+
+.iconButton {
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #000;
+    right: 0.3em;
+    transition: all 0.5s;
+}
+
+.contactButton:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em #000;
+}
+
+.contactButton:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em #000;
+}
+
+ul a img {
+    width: 300px;
+}
+
+nav {
+    padding: 2rem 0 0 0;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    gap: 50px;
+    margin-top: 120px;
+}
+
+.cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 260px;
+    padding: 20px 1px;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 15px -3px #000, 0 4px 6px -4px #000;
+    border-radius: 10px;
+    /* background-color: #6b6ecc; */
+    background: rgb(60, 60, 73);
+}
+
+.cards .content {
+    padding: 20px;
+}
+
+.cards .content .icon img {
+    width: 80px;
+    filter: invert(100%);
+}
+
+/* .cards .content .price {
+    color: white;
+    font-weight: 800;
+    font-size: 50px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+} */
+
+.cards .content .description {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.cards .content .title {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+/* BUTTON CARD */
+
+.card .cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.5em 0.8em 1.2em;
+    color: white;
+    background: rgb(250, 182, 18);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #000;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    text-decoration: none;
+
+    transition: background .3s
+}
+
+.card .cssbuttons-io-button:hover {
+    background: #ae841a;
+
+}
+
+.card .cssbuttons-io-button svg {
+    margin-right: 8px;
+}
+
+.card .cssbuttons-io-button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #000;
+}
+
+.card .cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #000;
+}
+
+/* MODAL */
+
+.modal-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+}
+
+.modal-wrapper {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+
+    display: grid;
+    place-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    position: relative;
+    background-color: rgb(60, 60, 73);
+    width: 100rem;
+    height: 50rem;
+
+    text-align: center;
+}
+
+.modal button {
+    position: absolute;
+    top: 1.6rem;
+    right: 1rem;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    box-shadow: none;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
+}
+
+.modal img {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #fff;
+}
+
+.modal h2 {
+    margin-top: 2rem;
+    font-size: 5.4rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.box {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.modal h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    width: 20rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.modal a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-size: 2rem;
+
+    transition: color 0.3s;
+}
+
+.modal a:hover {
+    color: #a9d03f;
+}
+
+.modal i {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (max-width: 900px) {
+    .page {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    ul a img {
+        width: 300px;
+    }
+
+    nav {
+        padding: 2rem 0 0 0;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+    .contactButton {
+        width: 150px;
+    }
+    .iconButton {
+        margin-left: 0.1em;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards .content {
+        padding: 20px;
+    }
+
+    .cards .content .icon img {
+        width: 40px;
+        filter: invert(100%);
+    }
+
+    .modal {
+        position: relative;
+        background-color: #1d1929;
+        width: 25rem;
+        height: 50rem;
+
+        text-align: center;
+    }
+
+    .modal img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .modal button {
+        position: absolute;
+        top: 1rem;
+        right: 0.8rem;
+        background: none;
+        border: none;
+
+        cursor: pointer;
+        transition: transform 0.3s;
+
+        box-shadow: none;
+    }
+
+    .box {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .modal h2 {
+        margin-top: 2rem;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .modal h3 {
+        display: flex;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 8px 0 0 0;
+        color: #fff;
+        padding: 0 10px;
+
+    }
+
+    .modal a {
+        font-size: 2rem;
+    }
+    .titulo h1 {
+        margin: 10rem 0 5rem 0;
+    }
+
+    .contactButton {
+        display: none;
+    }
+}
