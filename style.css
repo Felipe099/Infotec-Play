@@ -44,7 +44,7 @@ ul a img {
     width: 250px;
 }
 
-/* BUTTON MODAL */
+/* Button Suporte  */
 
 .contactButton {
     cursor: pointer;
@@ -99,7 +99,6 @@ ul a img {
 .cards {
     display: flex;
     flex-direction: column;
-    gap: 50px; // possivel problema no BOX que o NAVEGADOR não entende essa propriedade!
     margin-top: 50px;
     align-items: center;
 }
@@ -334,6 +333,12 @@ ul a img {
 }
 
 @media (min-width: 380px) {
+    .cards {
+        gap: 20px;
+    }
+    .card:last-child {
+        margin-bottom: 60px;
+    }
     .modal img {
         width: 1.5rem;
         height: 1.5rem;
@@ -383,25 +388,13 @@ ul a img {
 
         justify-content: center;
         text-align: center;
-        margin: 50px 0 0;
-        padding: 0 70px 0 70px;
+        padding: 0 70px 30px 70px;
     }
 
     .card {
         text-align: center;
     }
 
-    /* 
-    body::before {
-        height: 250px;
-    
-    }
-
-    .page {
-        width: 1200px;
-        height: auto;
-        justify-content: flex-start;
-    } */
     nav {
         align-items: center;
         justify-content: center;
@@ -422,6 +415,10 @@ ul a img {
 }
 
 @media (min-width: 1300px) {
+    .card .cssbuttons-io-button {
+        margin: 0 20px;
+    }
+
     .cards {
         display: flex;
         flex-direction: row;
@@ -568,8 +565,6 @@ ul a img {
         align-items: flex-start;
         margin-top: 120px;
     }
-
-    
 
     /* MODAL */
 
